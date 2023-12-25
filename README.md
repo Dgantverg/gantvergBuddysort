@@ -1,5 +1,5 @@
 # gantvergBuddysort
-Gantverg's implementation of buddy sort algorithm written in C
+Gantverg's implementation of buddy sort algorithm written in C. The base was created by the GBS team at the TU Munich, the algorithmic idea was implemented by me. 
 
 Form:
 $./ buddy . out -h
