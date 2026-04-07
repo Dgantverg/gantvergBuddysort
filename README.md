@@ -1,15 +1,51 @@
-# gantvergBuddysort
-Gantverg's implementation of buddy sort algorithm written in C. The base was created by the GBS team at the TU Munich, the algorithmic idea was implemented by me. 
+gantvergBuddysort
 
-Form:
-$./ buddy . out -h
+gantvergBuddysort is an implementation of the Buddy Sort algorithm written in C.
 
-Usage : ./ buddy . out [-b BLOCKSIZE ] [-n NUM_BLOCKS ]
-BLOCKSIZE : integer , interpreted as kiB (i.e. -b 4 => 4096 Bytes ). Has to be power of 2! The default
-is 4.
-NUM_BLOCKS : integer , number of blocks to be used . Has to be power of 2! The default is 32.
+The project builds upon a base framework originally developed by the GBS team at the Technical University of Munich. The algorithmic logic and implementation of Buddy Sort were developed by the author.
 
-Example: for b = block of 4 (4Kilibytes) and 32 blocks:
-$./ buddy . out -b 4 -n 8
+📌 Overview
 
-Use with run buddy.c, add buddy.c as a runnable file in c/c++ files
+Buddy Sort is a memory-block-based sorting approach that operates on fixed-size blocks. This implementation allows configurable block sizes and numbers of blocks, both of which must be powers of two.
+
+⚙️ Compilation & Execution
+
+Make sure buddy.c is included in your project and compiled as an executable.
+
+Compile
+gcc buddy.c -o buddy.out
+Run
+./buddy.out [OPTIONS]
+🧾 Usage
+./buddy.out [-b BLOCKSIZE] [-n NUM_BLOCKS]
+Parameters
+-b BLOCKSIZE
+Block size in KiB (kibibytes).
+Must be a power of 2
+Default: 4 (i.e., 4096 bytes)
+-n NUM_BLOCKS
+Number of blocks used in the algorithm.
+Must be a power of 2
+Default: 32
+▶️ Example
+
+Run the program with a block size of 4 KiB and 8 blocks:
+
+./buddy.out -b 4 -n 8
+⚠️ Notes
+Both BLOCKSIZE and NUM_BLOCKS must be powers of two.
+Invalid inputs may result in undefined behavior if not properly handled.
+
+Ensure the executable has permission to run:
+
+chmod +x buddy.out
+🔗 Repository
+
+GitHub repository:
+https://github.com/Dgantverg/gantvergBuddysort
+
+👤 Author
+
+Developed by D. Gantverg
+
+Base framework provided by the GBS team, Technical University of Munich.
